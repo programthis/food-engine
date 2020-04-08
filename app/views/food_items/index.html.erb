@@ -7,6 +7,9 @@ Welcome to your food list:
 <div class="formContainer">
 	<%= form_for @food_item do |form| %>
 		<div>
+			<%= form.collection_select :id, @foods, :id, :name, {prompt: "Select a food"} %>
+		</div>
+		<div>
 			<%= form.label :quantity %>
 	    	<%= form.number_field :quantity %>
 	    </div>
