@@ -1,10 +1,10 @@
-Welcome to your food list:
 
 <% current_user.food_items.each do |food_item| %>
 	<%= food_item %>
 <% end %>
 
 <div class="formContainer">
+	<h1>Add to current inventory:</h1>
 	<%= form_for @food_item do |form| %>
 		<div>
 			<%= form.collection_select :id, @foods, :id, :name, {prompt: "Select a food"} %>
