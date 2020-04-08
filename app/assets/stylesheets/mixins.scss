@@ -1,0 +1,32 @@
+@mixin border-box {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+@mixin flex-box {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+}
+
+@mixin flex-box-all-centre {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin animation-transition($speed) {
+	-webkit-transition: all $speed ease; /* Safari and Chrome */
+	-moz-transition: all $speed ease; /* Firefox */
+	-ms-transition: all $speed ease; /* IE 9 */
+	-o-transition: all $speed ease; /* Opera */
+	transition: all $speed ease;
+}
