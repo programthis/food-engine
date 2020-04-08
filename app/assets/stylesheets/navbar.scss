@@ -14,21 +14,10 @@ nav {
 		label {
 			font-size: 0;
 		}
-		.avatar {
-			cursor: pointer;
-		}
-		#avatarUpload, #updateAvatar {
-			display: none;
-		}
 		a {
 			margin: 0 10px;
 			font-size: 18px;
 			text-decoration: none;
-		}
-		img {
-			width: 20px;
-			height: 20px;
-			object-fit: cover;
 		}
 	}
 	.navbarMobile {
