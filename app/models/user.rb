@@ -5,5 +5,5 @@ class User < ApplicationRecord
            :recoverable, :rememberable, :validatable, :confirmable
     validates_uniqueness_of :email
 
-    has_many :ingredients
+    has_many :food_items
 end
