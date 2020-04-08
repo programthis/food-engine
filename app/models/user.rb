@@ -4,4 +4,6 @@ class User < ApplicationRecord
     devise :database_authenticatable, :registerable,
            :recoverable, :rememberable, :validatable, :confirmable
     validates_uniqueness_of :email
+
+    has_many :ingredients
 end
