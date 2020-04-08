@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
     authenticate :user do
         root to: "food_items#index"
+        resources :foods
     	resources :food_items
         # devise_scope :user do
         #     get 'users', to: 'devise/registrations#new'
