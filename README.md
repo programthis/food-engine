@@ -1,24 +1,28 @@
-# README
+# Installation Instructions:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+`cd food-engine`     
+`bundle install`      
+`rails db:setup`     
+`rails s`     
 
-Things you may want to cover:
+# Logging in on local development:
 
-* Ruby version
+As there is not an smtp server set up for local development, when you first sign up it won't send an email with the confirmation link. Instead, you can find the link in the server logs. Simply copy and paste the link into a browser and this will confirm your email address.
 
-* System dependencies
+# Updating credentials:
 
-* Configuration
+As you don't want to be commiting access keys, logins, or generally anything you would want to remain a secret, you should be modifying the encrypted credentials.yml.enc file. To modify this file, type the below:    
+`EDITOR="subl --wait" rails credentials:edit`     
 
-* Database creation
+When you are finished, simply close the file and it will be encrypted again.
 
-* Database initialization
+# Postgres troubleshooting:
 
-* How to run the test suite
+If you are on a mac, installing postgres should be relatively easy. If postgres does not successfully install through the bundle command, you can use:     
+`brew install postgres`
 
-* Services (job queues, cache servers, search engines, etc.)
+On linux, the process is a bit more involved:     
+`sudo apt-get install postgresql`
 
-* Deployment instructions
-
-* ...
+Starting the server on linux:     
+`pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgres start`
