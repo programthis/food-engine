@@ -5,6 +5,14 @@
 	    	<%= form.text_field :name, required: true %>
 	    </div>
 	    <div>
+			<%= form.label :category %>
+	    	<%= form.text_field :category, required: true %>
+	    </div>
+	    <div>
+			<%= form.label :expirable %><br>
+	    	<%= form.select :expirable, [true, false], required: true %>
+	    </div>
+	    <div>
 	    	<%= form.submit "Save Food" %>
 	    </div>
 	<% end %>
