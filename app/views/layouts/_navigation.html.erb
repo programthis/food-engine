@@ -4,9 +4,9 @@
 	</div>
 	<div class="navbarContents">
 		<% if current_user %>
-			<%= link_to('Profile', new_food_path) %>
+			<%= link_to('Profile', food_items_path) %>
 			<% if current_user.admin %>
-				<%= link_to('New Food', food_items_path) %>
+				<%= link_to('New Food', new_food_path) %>
 			<% end %>
 			<%= link_to('Logout', destroy_user_session_path, method: :delete) %>
 		<% else %>
@@ -23,7 +23,7 @@
 		<ul class="navbarMobileLinks">
 			<% if current_user %>
 				<li>
-					<%= link_to('Profile', new_food_path) %>
+					<%= link_to('Profile', food_items_path) %>
 				</li>
 				<% if current_user.admin %>
 					<li>
