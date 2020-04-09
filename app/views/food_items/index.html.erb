@@ -1,7 +1,13 @@
-
-<% current_user.food_items.each do |food_item| %>
-	<%= food_item.food.name %>
-<% end %>
+<div class="currentInventory">
+	<h1>
+		Current Inventory
+	</h1>
+	<% current_user.food_items.each do |food_item| %>
+		<%= food_item.food.name %>
+		<%= food_item.quantity %>
+		<%= food_item.weight %>
+	<% end %>
+</div>
 
 <div class="formContainer">
 	<h1>Add to current inventory:</h1>

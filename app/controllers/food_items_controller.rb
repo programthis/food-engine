@@ -7,11 +7,11 @@ class FoodItemsController < ApplicationController
 
 	def create
 		food = Food.find(params[:food_item][:id])
-		food_item = food.food_items.create(user: current_user)
+		food_item = food.food_items.create(food_item_params)
 		redirect_to root_path
 	end
 
 	def food_item_params
-		params.require(:food_item).permit(:name, :category, :expirable)
+		params.require(:food_item).permit(:quantity, :weight).merge(user: current_user)
 	end
 end
