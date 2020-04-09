@@ -8,7 +8,7 @@ Installing rvm (highly recommended) and rails:
 `cd food-engine`     
 `bundle install`      
 `rails db:setup`     
-`rails s`     
+`rails s --port 2000`     
 
 # Logging in on local development:
 

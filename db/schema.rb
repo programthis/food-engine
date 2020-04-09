@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 2020_04_08_220729) do
 
   create_table "foods", force: :cascade do |t|
     t.string "name"
+    t.boolean "expirable", default: false
+    t.string "category"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
