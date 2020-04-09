@@ -8,4 +8,9 @@
 
 .currentInventory {
 	padding: 20px;
+	.foodItem {
+		background-color: $primary-grey;
+		padding: 10px;
+		display: inline-block;
+	}
 }

@@ -3,9 +3,17 @@
 		Current Inventory
 	</h1>
 	<% current_user.food_items.each do |food_item| %>
-		<%= food_item.food.name %>
-		<%= food_item.quantity %>
-		<%= food_item.weight %>
+		<div class="foodItem">
+			<div>
+				<%= food_item.food.name %>
+			</div>
+			<div>
+				Quantity: <%= food_item.quantity %>
+			</div>
+			<div>
+				Weight: <%= food_item.weight %>
+			</div>
+		</div>
 	<% end %>
 </div>
 
