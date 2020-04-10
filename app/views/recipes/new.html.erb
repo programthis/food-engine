@@ -1,0 +1,23 @@
+<div class="formContainer">
+	<%= form_for @recipe do |form| %>
+		<div>
+			<%= form.label :name %>
+	    	<%= form.text_field :name, required: true %>
+	    </div>
+	    <div>
+			<%= form.label :description %>
+	    	<%= form.text_area :description, required: true %>
+	    </div>
+	    <div>
+			<%= form.label :time_needed, "Time needed in minutes (optional)" %>
+	    	<%= form.number_field :time_needed %>
+	    </div>
+	    <div>
+			<%= form.label :url, "Link to recipe (optional)" %>
+	    	<%= form.text_field :url %>
+	    </div>
+	    <div>
+	    	<%= form.submit "Save Recipe" %>
+	    </div>
+	<% end %>
+</div>

@@ -50,8 +50,10 @@ ActiveRecord::Schema.define(version: 2020_04_10_182020) do
     t.text "description"
     t.integer "time_needed"
     t.string "url"
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_recipes_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -75,4 +77,5 @@ ActiveRecord::Schema.define(version: 2020_04_10_182020) do
   add_foreign_key "food_items", "users"
   add_foreign_key "ingredients", "foods"
   add_foreign_key "ingredients", "recipes"
+  add_foreign_key "recipes", "users"
 end
