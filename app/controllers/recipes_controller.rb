@@ -6,10 +6,14 @@ class RecipesController < ApplicationController
 	def create
 		@recipe = Recipe.new(recipe_params)
 		if @recipe.save
-			redirect_to root_path
+			redirect_to recipe_path(@recipe)
 		else 
 			render json: { error: "Error creating recipe." }
 		end
+	end
+
+	def show
+		@recipe = Recipe.find(params[:id])
 	end
 
 	def recipe_params
