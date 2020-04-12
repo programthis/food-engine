@@ -4,15 +4,15 @@
 	</div>
 	<div class="navbarContents">
 		<% if current_user %>
-			<%= link_to('Profile', food_items_path) %>
+			<%= link_to('Profile', food_items_path, class: "#{'active' if current_page?(food_items_path)}") %>
 			<% if current_user.admin %>
-				<%= link_to('New Food', new_food_path) %>
-				<%= link_to('New Recipe', new_recipe_path) %>
+				<%= link_to('New Food', new_food_path, class: "#{'active' if current_page?(new_food_path)}") %>
+				<%= link_to('New Recipe', new_recipe_path, class: "#{'active' if current_page?(new_recipe_path)}") %>
 			<% end %>
 			<%= link_to('Logout', destroy_user_session_path, method: :delete) %>
 		<% else %>
-			<%= link_to('Login', new_user_session_path) %>
-			<%= link_to('Sign Up', new_user_registration_path) %>
+			<%= link_to('Login', new_user_session_path, class: "#{'active' if current_page?(new_user_session_path)}") %>
+			<%= link_to('Sign Up', new_user_registration_path, class: "#{'active' if current_page?(new_user_registration_path)}") %>
 		<% end %>
 	</div>
 	<div class="navbarMobile">
@@ -24,14 +24,14 @@
 		<ul class="navbarMobileLinks">
 			<% if current_user %>
 				<li>
-					<%= link_to('Profile', food_items_path) %>
+					<%= link_to('Profile', food_items_path, class: "#{'active' if current_page?(food_items_path)}") %>
 				</li>
 				<% if current_user.admin %>
 					<li>
-						<%= link_to('New Food', new_food_path) %>
+						<%= link_to('New Food', new_food_path, class: "#{'active' if current_page?(new_food_path)}") %>
 					</li>
 					<li>
-						<%= link_to('New Recipe', new_recipe_path) %>
+						<%= link_to('New Recipe', new_recipe_path, class: "#{'active' if current_page?(new_recipe_path)}") %>
 					</li>
 				<% end %>
 				<li>
@@ -39,10 +39,10 @@
 				</li>
 			<% else %>
 				<li>
-					<%= link_to('Login', new_user_session_path) %>
+					<%= link_to('Login', new_user_session_path, class: "#{'active' if current_page?(new_user_session_path)}") %>
 				</li>
 				<li>
-					<%= link_to('Sign Up', new_user_registration_path) %>
+					<%= link_to('Sign Up', new_user_registration_path, class: "#{'active' if current_page?(new_user_registration_path)}") %>
 				</li>
 			<% end %>
 		</ul>

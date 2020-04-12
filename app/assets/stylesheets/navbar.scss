@@ -18,6 +18,9 @@ nav {
 			margin: 0 10px;
 			font-size: 18px;
 			text-decoration: none;
+			&.active {
+				font-weight: bold;
+			}
 		}
 	}
 	.navbarMobile {
@@ -42,6 +45,9 @@ nav {
 			padding: 5px;
 			&:hover {
 				background-color: silver;
+			}
+			&.active {
+				font-weight: bold;
 			}
 		}
 		.hamburger {
