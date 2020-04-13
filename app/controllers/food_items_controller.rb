@@ -7,7 +7,16 @@ class FoodItemsController < ApplicationController
 
 	def create
 		food = Food.find(params[:food_item][:food_id])
-		food_item = food.food_items.create(food_item_params)
+
+		if FoodItem.where(food_id: food.id).blank?
+			food_item = food.food_items.create(food_item_params)
+		else
+			food_item = FoodItem.find_by(food_id: food.id)
+			food_item.quantity += (params[:food_item][:quantity]).to_i
+			food_item.weight_in_mg += (params[:food_item][:weight_in_mg]).to_f
+			food_item.save
+		end
+		
 		redirect_to root_path
 	end
 
