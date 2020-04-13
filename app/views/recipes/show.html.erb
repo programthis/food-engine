@@ -18,7 +18,7 @@ Recipe
 	    </div>
 	    <div>
 			<%= form.label :weight_in_mg %>
-	    	<%= form.text_field :weight_in_mg, step: "0.01" %>
+	    	<%= form.number_field :weight_in_mg, step: "0.01" %>
 	    </div>
 	    <div>
 	    	<%= form.hidden_field :recipe_id, value: @recipe.id %>
