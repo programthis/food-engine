@@ -14,6 +14,14 @@ Installing rvm (highly recommended) and rails:
 
 As there is not an smtp server set up for local development, when you first sign up it won't send an email with the confirmation link. Instead, you can find the link in the server logs. Simply copy and paste the link into a browser and this will confirm your email address.
 
+# Setting admin user:
+For certain functionality (adding new food, recipe etc), you will need to update the user account so that it is an admin. To do so, simply login to the rails console, change the attribute, and save it.
+
+`rails c`     
+`u=User.first`     
+`u.admin=true`     
+`u.save`     
+
 # Updating credentials:
 
 As you don't want to be commiting access keys, logins, or generally anything you would want to remain a secret, you should be modifying the encrypted credentials.yml.enc file. To modify this file, type the below:    
