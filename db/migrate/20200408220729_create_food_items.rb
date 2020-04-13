@@ -2,7 +2,7 @@ class CreateFoodItems < ActiveRecord::Migration[6.0]
   def change
     create_table :food_items do |t|
       t.integer :quantity
-      t.string :weight
+      t.float :weight_in_mg
       t.references :user, null: false, foreign_key: true
       t.references :food, null: false, foreign_key: true
 

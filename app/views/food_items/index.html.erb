@@ -11,7 +11,7 @@
 				Quantity: <%= food_item.quantity %>
 			</div>
 			<div>
-				Weight: <%= food_item.weight %>
+				Weight (mg): <%= food_item.weight_in_mg %>
 			</div>
 		</div>
 	<% end %>
@@ -28,8 +28,8 @@
 	    	<%= form.number_field :quantity %>
 	    </div>
 	    <div>
-			<%= form.label :weight %>
-	    	<%= form.text_field :weight, step: "0.01" %>
+			<%= form.label :weight_in_mg %>
+	    	<%= form.text_field :weight_in_mg, step: "0.01" %>
 	    </div>
 	    <div>
 	    	<%= form.submit "Save" %>

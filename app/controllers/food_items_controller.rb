@@ -12,6 +12,6 @@ class FoodItemsController < ApplicationController
 	end
 
 	def food_item_params
-		params.require(:food_item).permit(:quantity, :weight).merge(user: current_user)
+		params.require(:food_item).permit(:quantity, :weight_in_mg).merge(user: current_user)
 	end
 end

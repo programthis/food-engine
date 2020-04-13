@@ -6,6 +6,6 @@ class IngredientsController < ApplicationController
 	end
 
 	def ingredient_params
-		params.require(:ingredient).permit(:food_id, :quantity, :weight)
+		params.require(:ingredient).permit(:food_id, :quantity, :weight_in_mg)
 	end
 end

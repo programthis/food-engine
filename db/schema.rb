@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2020_04_10_182020) do
 
   create_table "food_items", force: :cascade do |t|
     t.integer "quantity"
-    t.string "weight"
+    t.float "weight_in_mg"
     t.bigint "user_id", null: false
     t.bigint "food_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2020_04_10_182020) do
 
   create_table "ingredients", force: :cascade do |t|
     t.integer "quantity"
-    t.string "weight"
+    t.float "weight_in_mg"
     t.bigint "recipe_id", null: false
     t.bigint "food_id", null: false
     t.datetime "created_at", precision: 6, null: false
