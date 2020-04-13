@@ -14,4 +14,7 @@
 
 .recipeContainer {
 	padding: 20px;
+	.ingredient {
+		@include grey-box;
+	}
 }
