@@ -1,11 +1,18 @@
-Recipe
-<%= @recipe.name %>
-<% @recipe.ingredients.each do |ingredient| %>
-	<div>
-		<%= ingredient.food.name %>
-	</div>
-<% end %>
 
+<div class="recipeContainer">
+	<h1>Recipe</h1>
+	<div>
+		<%= @recipe.name %>
+	</div>
+	<div>
+		Instructions: <%= @recipe.description %>
+	</div>
+	<% @recipe.ingredients.each do |ingredient| %>
+		<div>
+			<%= ingredient.food.name %>
+		</div>
+	<% end %>
+</div>
 <div class="formContainer">
 	<h1>Add ingredient to recipe:</h1>
 	<%= form_for @ingredient do |form| %>
