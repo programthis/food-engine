@@ -1,2 +1,30 @@
 Recipe
 <%= @recipe.name %>
+<% @recipe.ingredients.each do |ingredient| %>
+	<div>
+		<%= ingredient.food.name %>
+	</div>
+<% end %>
+
+<div class="formContainer">
+	<h1>Add ingredient to recipe:</h1>
+	<%= form_for @ingredient do |form| %>
+		<div>
+			<%= form.collection_select :food_id, @foods, :id, :name, {prompt: "Select a food"} %>
+		</div>
+		<div>
+			<%= form.label :quantity %>
+	    	<%= form.number_field :quantity %>
+	    </div>
+	    <div>
+			<%= form.label :weight %>
+	    	<%= form.text_field :weight, step: "0.01" %>
+	    </div>
+	    <div>
+	    	<%= form.hidden_field :recipe_id, value: @recipe.id %>
+	    </div>
+	    <div>
+	    	<%= form.submit "Save" %>
+	    </div>
+	<% end %>
+</div>

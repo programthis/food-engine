@@ -5,6 +5,7 @@
 	<div class="navbarContents">
 		<% if current_user %>
 			<%= link_to('Profile', food_items_path, class: "#{'active' if current_page?(food_items_path)}") %>
+			<%= link_to('Recipes', recipes_path, class: "#{'active' if current_page?(recipes_path)}") %>
 			<% if current_user.admin %>
 				<%= link_to('New Food', new_food_path, class: "#{'active' if current_page?(new_food_path)}") %>
 				<%= link_to('New Recipe', new_recipe_path, class: "#{'active' if current_page?(new_recipe_path)}") %>
@@ -25,6 +26,9 @@
 			<% if current_user %>
 				<li>
 					<%= link_to('Profile', food_items_path, class: "#{'active' if current_page?(food_items_path)}") %>
+				</li>
+				<li>
+					<%= link_to('Recipes', recipes_path, class: "#{'active' if current_page?(recipes_path)}") %>
 				</li>
 				<% if current_user.admin %>
 					<li>

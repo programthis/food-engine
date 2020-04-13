@@ -5,5 +5,6 @@ Rails.application.routes.draw do
         resources :foods
     	resources :food_items
         resources :recipes
+        resources :ingredients
     end
 end
