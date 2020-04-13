@@ -10,7 +10,7 @@ Recipe
 	<h1>Add ingredient to recipe:</h1>
 	<%= form_for @ingredient do |form| %>
 		<div>
-			<%= form.collection_select :food_id, @foods, :id, :name, {prompt: "Select a food"} %>
+			<%= form.collection_select :food_id, @foods, :id, :name, {prompt: "Select a food"}, required: true %>
 		</div>
 		<div>
 			<%= form.label :quantity %>
