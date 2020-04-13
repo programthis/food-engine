@@ -30,3 +30,12 @@
 	-o-transition: all $speed ease; /* Opera */
 	transition: all $speed ease;
 }
+
+@mixin grey-box {
+	padding: 20px;
+	background-color: $primary-grey;
+	display: inline-block;
+	&:hover {
+		background-color: $secondary-grey;
+	}
+}

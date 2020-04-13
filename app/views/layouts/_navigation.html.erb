@@ -9,6 +9,7 @@
 			<% if current_user.admin %>
 				<%= link_to('New Food', new_food_path, class: "#{'active' if current_page?(new_food_path)}") %>
 				<%= link_to('New Recipe', new_recipe_path, class: "#{'active' if current_page?(new_recipe_path)}") %>
+				<%= link_to('All Foods', foods_path, class: "#{'active' if current_page?(foods_path)}") %>
 			<% end %>
 			<%= link_to('Logout', destroy_user_session_path, method: :delete) %>
 		<% else %>
@@ -36,6 +37,9 @@
 					</li>
 					<li>
 						<%= link_to('New Recipe', new_recipe_path, class: "#{'active' if current_page?(new_recipe_path)}") %>
+					</li>
+					<li>
+						<%= link_to('All Foods', foods_path, class: "#{'active' if current_page?(foods_path)}") %>
 					</li>
 				<% end %>
 				<li>

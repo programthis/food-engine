@@ -6,7 +6,7 @@ class FoodItemsController < ApplicationController
 	end
 
 	def create
-		food = Food.find(params[:food_item][:id])
+		food = Food.find(params[:food_item][:food_id])
 		food_item = food.food_items.create(food_item_params)
 		redirect_to root_path
 	end

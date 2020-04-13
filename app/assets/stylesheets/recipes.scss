@@ -8,12 +8,7 @@
 .recipesContainer {
 	padding: 20px;
 	.recipe {
-		padding: 20px;
-		background-color: $primary-grey;
-		display: inline-block;
-		&:hover {
-			background-color: $secondary-grey;
-		}
+		@include grey-box;
 	}
 }
 

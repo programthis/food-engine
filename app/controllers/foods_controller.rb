@@ -1,4 +1,8 @@
 class FoodsController < ApplicationController
+	def index
+		@foods = Food.all
+	end
+
 	def new
 		@food = Food.new
 	end
@@ -10,6 +14,11 @@ class FoodsController < ApplicationController
 		else 
 			render json: { error: "Error creating food." }
 		end
+	end
+
+	def show
+		@food = Food.find(params[:id])
+		@food_item = FoodItem.new
 	end
 
 	def food_params
