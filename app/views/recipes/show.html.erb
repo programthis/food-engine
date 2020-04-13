@@ -7,9 +7,16 @@
 	<div>
 		Instructions: <%= @recipe.description %>
 	</div>
+	<h2>Ingredients</h2>
 	<% @recipe.ingredients.each do |ingredient| %>
 		<div>
 			<%= ingredient.food.name %>
+		</div>
+		<div>
+			Quantity: <%= ingredient.quantity %>
+		</div>
+		<div>
+			Weight: <%= number_with_precision(ingredient.weight_in_mg, precision: 2) %>
 		</div>
 	<% end %>
 </div>
