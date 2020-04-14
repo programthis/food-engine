@@ -26,6 +26,12 @@
 body {
 	background-color: $primary-white;
 	color: $primary-black;
+	font-family: "Lato-Regular";
+}
+
+h1, h2, h3 {
+	font-family: "Lato-Bold";
+	margin-bottom: 10px;
 }
 
 a {
