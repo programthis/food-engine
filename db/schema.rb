@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2020_04_10_182020) do
     t.string "name"
     t.boolean "expirable", default: false
     t.string "category"
+    t.string "subcategory"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

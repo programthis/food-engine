@@ -6,7 +6,7 @@ csv.each do |row|
     t = Food.new
     t.name = row['name']
     t.category = row['category']
-    #t.subcategory = row['sub-category']
+    t.subcategory = row['sub-category']
     t.save
     puts "#{t.name}, #{t.category} saved"
 end
