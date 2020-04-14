@@ -42,8 +42,14 @@
 	&:hover {
 		background-color: $secondary-grey;
 	}
+	.imageContainer {
+		width: 100px;
+		height: 100px;
+		background-color: silver;
+	}
 	img {
-		width: 100%;
+		width: 100px;
+		height: 100px;
 		object-fit: cover;
 	}
 }
