@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2020_04_14_020806) do
 
   create_table "food_items", force: :cascade do |t|
     t.integer "quantity"
-    t.float "weight_in_mg"
+    t.string "weight"
     t.bigint "user_id", null: false
     t.bigint "food_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -51,13 +51,14 @@ ActiveRecord::Schema.define(version: 2020_04_14_020806) do
     t.string "name"
     t.boolean "expirable", default: false
     t.string "category"
+    t.string "subcategory"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "ingredients", force: :cascade do |t|
     t.integer "quantity"
-    t.float "weight_in_mg"
+    t.string "weight"
     t.bigint "recipe_id", null: false
     t.bigint "food_id", null: false
     t.datetime "created_at", precision: 6, null: false
