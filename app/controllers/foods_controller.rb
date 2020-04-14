@@ -22,6 +22,6 @@ class FoodsController < ApplicationController
 	end
 
 	def food_params
-		params.require(:food).permit(:name, :category, :expirable)
+		params.require(:food).permit(:name, :category, :expirable, :image)
 	end
 end

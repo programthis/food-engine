@@ -1,5 +1,8 @@
 <div class="foodContainer">
 	<h1><%= @food.name %></h1>
+	<% if @food.image.attached? %>
+		<%= image_tag(@food.image) %>
+	<% end %>
 </div>
 
 <div class="formContainer">

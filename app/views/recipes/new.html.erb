@@ -17,6 +17,10 @@
 	    	<%= form.text_field :url %>
 	    </div>
 	    <div>
+	    	<%= form.label :image %><br>
+	    	<%= form.file_field :image %>
+	    </div>
+	    <div>
 	    	<%= form.submit "Save Recipe" %>
 	    </div>
 	<% end %>

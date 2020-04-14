@@ -36,7 +36,14 @@
 	background-color: $primary-grey;
 	display: inline-block;
 	margin-bottom: 5px;
+	width: 100px;
+	height: 200px;
+	vertical-align: top;
 	&:hover {
 		background-color: $secondary-grey;
+	}
+	img {
+		width: 100%;
+		object-fit: cover;
 	}
 }

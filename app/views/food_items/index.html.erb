@@ -4,6 +4,11 @@
 	</h1>
 	<% current_user.food_items.each do |food_item| %>
 		<div class="foodItem">
+			<% if food_item.food.image.attached? %>
+				<div>
+					<%= image_tag(food_item.food.image) %>
+				</div>
+			<% end %>
 			<div>
 				<%= food_item.food.name %>
 			</div>

@@ -13,6 +13,10 @@
 	    	<%= form.select :expirable, [true, false], required: true %>
 	    </div>
 	    <div>
+	    	<%= form.label :image %><br>
+	    	<%= form.file_field :image %>
+	    </div>
+	    <div>
 	    	<%= form.submit "Save Food" %>
 	    </div>
 	<% end %>
