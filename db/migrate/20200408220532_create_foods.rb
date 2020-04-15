@@ -4,6 +4,7 @@ class CreateFoods < ActiveRecord::Migration[6.0]
       t.string :name
       t.boolean :expirable, default: false
       t.string :category
+      t.string :subcategory
       t.timestamps
     end
   end
