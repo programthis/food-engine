@@ -28,23 +28,3 @@
 		<% end %>
 	<% end %>
 </div>
-
-<div class="formContainer">
-	<h1>Add to current inventory:</h1>
-	<%= form_for @food_item do |form| %>
-		<div>
-			<%= form.collection_select :food_id, @foods, :id, :name, {prompt: "Select a food"}, required: true %>
-		</div>
-		<div>
-			<%= form.label :quantity %>
-	    	<%= form.number_field :quantity %>
-	    </div>
-	    <div>
-			<%= form.label :weight_in_mg %>
-	    	<%= form.number_field :weight_in_mg, step: "0.01" %>
-	    </div>
-	    <div>
-	    	<%= form.submit "Save" %>
-	    </div>
-	<% end %>
-</div>
