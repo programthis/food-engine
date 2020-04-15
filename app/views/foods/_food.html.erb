@@ -1,4 +1,4 @@
-<div class="food">
+<%= link_to food_path(food), class: "food" do %>
 	<% if food.respond_to?(:pg_search_highlight) %>
 		<div class="imageContainer">
 			<% if food.image.attached? %>
@@ -14,4 +14,4 @@
 		</div>
 		<%= food.name %>
 	<% end %>
-</div>
+<% end %>
