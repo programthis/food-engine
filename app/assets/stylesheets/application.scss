@@ -48,6 +48,9 @@ footer {
 	width: 400px;
 	padding: 20px;
 	margin: 0 auto;
+	&.left {
+		margin: 0;
+	}
 	form {
 		width: 100%;
 		input {
