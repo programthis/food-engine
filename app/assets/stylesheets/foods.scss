@@ -8,6 +8,7 @@
 
 .foodsContainer {
 	padding: 20px;
+	display: inline-block;
 	.food {
 		@include grey-box;
 	}

@@ -3,7 +3,12 @@ class FoodItemsController < ApplicationController
 		@food_items = current_user.food_items
 		@food_item = FoodItem.new
 		@foods = Food.all
-		@recipes = Recipe.all
+
+		food_ids = []
+		@food_items.each do |food_item|
+			food_ids << food_item.food_id
+		end
+		@recipes = Recipe.joins(:ingredients).where("ingredients.food_id IN ( ? )", food_ids)
 	end
 
 	def create
