@@ -1,7 +1,17 @@
-<li>
+<div class="food">
 	<% if food.respond_to?(:pg_search_highlight) %>
+		<div class="imageContainer">
+			<% if food.image.attached? %>
+				<%= image_tag(food.image) %>
+			<% end %>
+		</div>
 		<%= food.pg_search_highlight.html_safe %>
 	<% else %>
+		<div class="imageContainer">
+			<% if food.image.attached? %>
+				<%= image_tag(food.image) %>
+			<% end %>
+		</div>
 		<%= food.name %>
 	<% end %>
-</li>
+</div>
