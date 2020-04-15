@@ -33,5 +33,17 @@
 		<h2>
 			Meals you can make now
 		</h2>
+		<% @recipes.each do |recipe| %>
+			<%= link_to recipe_path(recipe), class: "recipeItem" do %>
+				<div class="imageContainer">
+					<% if recipe.image.attached? %>
+						<%= image_tag(recipe.image) %>
+					<% end %>
+				</div>
+				<div class="header">
+					<%= recipe.name %>
+				</div>
+			<% end %>
+		<% end %>
 	</div>
 </div>

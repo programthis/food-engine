@@ -12,7 +12,7 @@
 		width: 45%;
 		display: inline-block;
 		vertical-align: top;
-		.foodItem {
+		.foodItem, .recipeItem {
 			@include grey-box;
 		}
 	}

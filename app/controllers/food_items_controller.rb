@@ -3,6 +3,7 @@ class FoodItemsController < ApplicationController
 		@food_items = current_user.food_items
 		@food_item = FoodItem.new
 		@foods = Food.all
+		@recipes = Recipe.all
 	end
 
 	def create
