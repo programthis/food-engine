@@ -5,26 +5,33 @@
 	<% end %>
 </div>
 
-<div class="currentInventory">
-	<h1>
-		Current Inventory
-	</h1>
-	<% current_user.food_items.each do |food_item| %>
-		<%= link_to food_path(food_item.food), class: "foodItem" do %>
-			<div class="imageContainer">
-				<% if food_item.food.image.attached? %>
-					<%= image_tag(food_item.food.image) %>
-				<% end %>
-			</div>
-			<div class="header">
-				<%= food_item.food.name %>
-			</div>
-			<div>
-				Quantity: <%= food_item.quantity %>
-			</div>
-			<div>
-				Weight (mg): <%= number_with_precision(food_item.weight_in_mg, precision: 2) %>
-			</div>
+<div class="currentContainer">
+	<div class="currentInventory">
+		<h2>
+			Current Inventory
+		</h2>
+		<% current_user.food_items.each do |food_item| %>
+			<%= link_to food_path(food_item.food), class: "foodItem" do %>
+				<div class="imageContainer">
+					<% if food_item.food.image.attached? %>
+						<%= image_tag(food_item.food.image) %>
+					<% end %>
+				</div>
+				<div class="header">
+					<%= food_item.food.name %>
+				</div>
+				<div>
+					Quantity: <%= food_item.quantity %>
+				</div>
+				<div>
+					Weight (mg): <%= number_with_precision(food_item.weight_in_mg, precision: 2) %>
+				</div>
+			<% end %>
 		<% end %>
-	<% end %>
+	</div>
+	<div class="currentMeals">
+		<h2>
+			Meals you can make now
+		</h2>
+	</div>
 </div>
