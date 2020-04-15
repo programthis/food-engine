@@ -1,6 +1,10 @@
 class FoodsController < ApplicationController
 	def index
-		@foods = Food.all
+		if params[:term]
+			@foods = Food.search_by_name(params[:term]).with_pg_search_highlight
+		else
+			@foods = Food.all
+		end
 	end
 
 	def new

@@ -1,0 +1,7 @@
+<li>
+	<% if food.respond_to?(:pg_search_highlight) %>
+		<%= food.pg_search_highlight.html_safe %>
+	<% else %>
+		<%= food.name %>
+	<% end %>
+</li>

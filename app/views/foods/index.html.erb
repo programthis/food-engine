@@ -1,8 +1,4 @@
 <div class="foodsContainer">
 	<h1>All Foods</h1>
-	<% @foods.each do |food| %>
-		<%= link_to food_path(food), class: "food" do %>
-			<%= food.name %>
-		<% end %>
-	<% end %>
+	<%= render @foods %>
 </div>

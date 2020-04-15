@@ -1,3 +1,8 @@
+<%= form_tag foods_path, method: :get do %>
+	<%= text_field_tag 'term', params[:term], placeholder: "Enter food name or category" %>
+	<%= submit_tag 'Search!' %>
+<% end %>
+
 <div class="currentInventory">
 	<h1>
 		Current Inventory
