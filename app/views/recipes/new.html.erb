@@ -1,12 +1,12 @@
-<div class="formContainer">
+<div class="formContainer wide">
 	<%= form_for @recipe do |form| %>
 		<div>
 			<%= form.label :name %>
 	    	<%= form.text_field :name, required: true %>
 	    </div>
 	    <div>
-			<%= form.label :description %>
-	    	<%= form.text_area :description, required: true %>
+			<%= form.label :content %>
+	    	<%= form.rich_text_area :content, required: true %>
 	    </div>
 	    <div>
 			<%= form.label :time_needed, "Time needed in minutes (optional)" %>

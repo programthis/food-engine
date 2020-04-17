@@ -17,6 +17,7 @@
 @import "./mixins";
 @import "./colours";
 @import "./fonts";
+@import "./actiontext.scss";
 
 * {
 	margin: 0;
@@ -50,6 +51,9 @@ footer {
 	margin: 0 auto;
 	&.left {
 		margin: 0;
+	}
+	&.wide {
+		width: 70%;
 	}
 	&.searchInput {
 		input {
