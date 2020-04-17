@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 2020_04_14_020806) do
     t.boolean "expirable", default: false
     t.string "category"
     t.string "subcategory"
+    t.string "buy_from_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
