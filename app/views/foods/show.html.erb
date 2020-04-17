@@ -3,6 +3,9 @@
 	<% if @food.image.attached? %>
 		<%= image_tag(@food.image) %>
 	<% end %>
+	<div>
+		<%= link_to "Buy now", @food.buy_from_url, target: :_blank %>
+	</div>
 </div>
 
 <div class="formContainer left">
