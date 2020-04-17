@@ -12,13 +12,15 @@
 		width: 45%;
 		display: inline-block;
 		vertical-align: top;
+		background-color: $primary-grey;
 		.foodItem, .recipeItem {
 			@include grey-box;
 		}
 	}
-
+	.currentInventory {
+		margin-right: 10px;
+	}
 	.currentMeals {
-		background-color: $primary-grey;
 		height: 100%;
 	}
 }

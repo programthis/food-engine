@@ -51,6 +51,11 @@ footer {
 	&.left {
 		margin: 0;
 	}
+	&.searchInput {
+		input {
+			font-size: 20px;
+		}
+	}
 	form {
 		width: 100%;
 		input {

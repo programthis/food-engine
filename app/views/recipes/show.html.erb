@@ -1,20 +1,21 @@
-
 <div class="recipeContainer">
 	<h1>Recipe</h1>
-	<div>
+	<h2>
 		<%= @recipe.name %>
-	</div>
+	</h2>
 	<% if @recipe.image.attached? %>
 		<div>
 			<%= image_tag(@recipe.image) %>
 		</div>
 	<% end %>
-	<div>
-		Instructions: <%= @recipe.description %>
-	</div>
 	<h2>Ingredients</h2>
 	<% @recipe.ingredients.each do |ingredient| %>
 		<div class="ingredient">
+			<div class="imageContainer">
+				<% if ingredient.food.image.attached? %>
+					<%= image_tag(ingredient.food.image) %>
+				<% end %>
+			</div>
 			<div>
 				<%= ingredient.food.name %>
 			</div>
@@ -27,7 +28,15 @@
 		</div>
 	<% end %>
 </div>
-<div class="formContainer">
+<div class="recipeContainer">
+	<h2>
+		Instructions:
+	</h2>
+	<div>
+		<%= @recipe.description %>
+	</div>
+</div>
+<div class="formContainer left">
 	<h1>Add ingredient to recipe:</h1>
 	<%= form_for @ingredient do |form| %>
 		<div>
