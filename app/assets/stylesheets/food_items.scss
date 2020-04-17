@@ -13,6 +13,7 @@
 		display: inline-block;
 		vertical-align: top;
 		background-color: $primary-grey;
+		border-bottom: 10px solid $secondary-green;
 		.foodItem, .recipeItem {
 			@include grey-box;
 		}
