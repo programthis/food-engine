@@ -14,8 +14,16 @@
 		vertical-align: top;
 		background-color: $primary-grey;
 		border-bottom: 10px solid $secondary-green;
+		font-size: 0;
+		h2 {
+			font-size: 20px;
+		}
 		.foodItem, .recipeItem {
 			@include grey-box;
+			font-size: 16px;
+			&:not(:last-child) {
+				border-right: 2px solid $primary-white;
+			}
 		}
 	}
 	.currentInventory {
