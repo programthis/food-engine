@@ -64,7 +64,7 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default_url_options = { host: "https://whispering-hollows-40860.herokuapp.com/" }
-  config.action_mailer.default_options = { from: "no-reply@fileuploadengine.com", reply_to: "no-reply@fileuploadengine.com" }
+  config.action_mailer.default_options = { from: "no-reply@allineed.com", reply_to: "no-reply@allineed.com" }
   config.action_mailer.smtp_settings = {
     address:              'smtp.gmail.com',
     port:                 587,
