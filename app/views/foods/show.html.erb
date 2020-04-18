@@ -6,6 +6,9 @@
 	<div>
 		<%= link_to "Buy now", @food.buy_from_url, target: :_blank %>
 	</div>
+	<div>
+		<%= link_to "Delete", food_path(@food), method: :delete %>
+	</div>
 </div>
 
 <div class="formContainer left">
