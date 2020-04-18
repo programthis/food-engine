@@ -22,6 +22,12 @@ class RecipesController < ApplicationController
 		@ingredient = Ingredient.new
 	end
 
+	def destroy
+		recipe = Recipe.find(params[:id])
+		recipe.destroy
+		redirect_to root_path
+	end
+
 	def recipe_params
 		params.require(:recipe).permit(:name, :content, :time_needed, :url, :image).merge(user: current_user)
 	end
