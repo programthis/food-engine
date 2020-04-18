@@ -58,3 +58,28 @@
 		object-fit: cover;
 	}
 }
+
+@mixin grey-box-no-hover {
+	padding: 20px;
+	background-color: $primary-grey;
+	display: inline-block;
+	margin-bottom: 5px;
+	width: 100px;
+	height: 200px;
+	vertical-align: top;
+	.imageContainer {
+		width: 100px;
+		height: 100px;
+		background-color: silver;
+		margin-bottom: 5px;
+		border-bottom: 5px solid $secondary-blue;
+	}
+	.header {
+		font-weight: bold;
+	}
+	img {
+		width: 100px;
+		height: 100px;
+		object-fit: cover;
+	}
+}

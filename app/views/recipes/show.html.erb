@@ -25,10 +25,13 @@
 			<div>
 				Weight: <%= number_with_precision(ingredient.weight_in_mg, precision: 2) %>
 			</div>
+			<div>
+				<%= link_to "Delete Ingredient", ingredient_path(ingredient), method: :delete %>
+			</div>
 		</div>
 	<% end %>
 	<div>
-		<%= link_to "Delete", recipe_path(@recipe), method: :delete %>
+		<%= link_to "Delete Recipe", recipe_path(@recipe), method: :delete %>
 	</div>
 </div>
 <div class="recipeContainer">
