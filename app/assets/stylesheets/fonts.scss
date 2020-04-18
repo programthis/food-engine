@@ -1,19 +1,19 @@
 @font-face {
 	font-family: "Lusitana-Regular";
-	src: url(Lusitana/Lusitana-Regular.ttf) format("truetype");
+	src: font-url(Lusitana/Lusitana-Regular) format("truetype");
 }
 
 @font-face {
 	font-family: "Lusitana-Bold";
-	src: url(Lusitana/Lusitana-Bold.ttf) format("truetype");
+	src: font-url(Lusitana/Lusitana-Bold) format("truetype");
 }
 
 @font-face {
 	font-family: "Lato-Regular";
-	src: url(Lato/Lato-Regular.ttf) format("truetype");
+	src: font-url(Lato/Lato-Regular) format("truetype");
 }
 
 @font-face {
 	font-family: "Lato-Bold";
-	src: url(Lato/Lato-Bold.ttf) format("truetype");
+	src: font-url(Lato/Lato-Bold) format("truetype");
 }
