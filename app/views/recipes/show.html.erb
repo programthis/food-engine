@@ -11,7 +11,7 @@
 	<h2>Ingredients</h2>
 	<% @recipe.ingredients.each do |ingredient| %>
 		<div class="ingredient">
-			<div class="imageContainer">
+			<div class="imageContainer large">
 				<% if ingredient.food.image.attached? %>
 					<%= image_tag(ingredient.food.image) %>
 				<% end %>

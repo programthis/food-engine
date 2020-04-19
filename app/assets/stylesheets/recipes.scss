@@ -21,7 +21,7 @@
 		width: 400px;
 	}
 	.ingredient {
-		@include grey-box-no-hover;
+		@include grey-box-large-no-hover;
 		a {
 			text-decoration: underline;
 		}
