@@ -20,6 +20,15 @@ class FoodsController < ApplicationController
 		end
 	end
 
+	def update
+		@food = Food.new(food_params)
+		if @food.update(food_params)
+			redirect_to food_path(@food)
+		else
+			render "edit"
+		end
+	end
+
 	def show
 		@food = Food.find(params[:id])
 		@food_item = FoodItem.new

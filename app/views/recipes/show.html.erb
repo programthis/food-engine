@@ -90,3 +90,37 @@
 	    </div>
 	<% end %>
 </div>
+
+<% if current_user.admin %>
+	<div class="formContainer left">
+		<%= form_for @recipe, url: {action: "update"} do |form| %>
+			<div>
+				<%= form.label :name %>
+		    	<%= form.text_field :name, required: true %>
+		    </div>
+		    <div>
+				<%= form.label :content %>
+		    	<%= form.rich_text_area :content, required: true %>
+		    </div>
+		    <div>
+				<%= form.label :time_needed, "Time needed in minutes (optional)" %>
+		    	<%= form.number_field :time_needed %>
+		    </div>
+		     <div>
+				<%= form.label :image_url, "Image URL (optional)" %>
+		    	<%= form.text_field :image_url %>
+		    </div>
+		    <div>
+				<%= form.label :url, "Link to recipe (optional)" %>
+		    	<%= form.text_field :url %>
+		    </div>
+		    <div>
+		    	<%= form.label :image %><br>
+		    	<%= form.file_field :image %>
+		    </div>
+		    <div>
+		    	<%= form.submit "Save Recipe" %>
+		    </div>
+		<% end %>
+	</div>
+<% end %>

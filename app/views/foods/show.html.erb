@@ -12,6 +12,39 @@
 		<%= link_to "Delete", food_path(@food), method: :delete %>
 	</div>
 </div>
+<% if current_user.admin %>
+	<div class="formContainer left">
+		<%= form_for @food, url: {action: "update"} do |form| %>
+			<div>
+				<%= form.label :name %>
+		    	<%= form.text_field :name, required: true %>
+		    </div>
+		    <div>
+				<%= form.label :category %>
+		    	<%= form.text_field :category, required: true %>
+		    </div>
+		    <div>
+				<%= form.label :image_url %>
+		    	<%= form.text_field :image_url %>
+		    </div>
+		    <div>
+				<%= form.label :buy_from_url %>
+		    	<%= form.text_field :buy_from_url %>
+		    </div>
+		    <div>
+				<%= form.label :expirable %><br>
+		    	<%= form.select :expirable, [true, false], required: true %>
+		    </div>
+		    <div>
+		    	<%= form.label :image %><br>
+		    	<%= form.file_field :image %>
+		    </div>
+		    <div>
+		    	<%= form.submit "Save Food" %>
+		    </div>
+		<% end %>
+	</div>
+<% end %>
 
 <div class="formContainer left">
 	<h1>Add to current inventory:</h1>
