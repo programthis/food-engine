@@ -22,9 +22,21 @@
 			<div>
 				Quantity: <%= ingredient.quantity %>
 			</div>
-			<div>
-				Weight: <%= number_with_precision(ingredient.weight_in_mg, precision: 2) %>
-			</div>
+			<% if ingredient.cups %>
+				<div>
+					Cups: <%= number_with_precision(ingredient.cups, precision: 2) %>
+				</div>
+			<% end %>
+			<% if ingredient.weight_in_mg %>
+				<div>
+					Weight (mg): <%= number_with_precision(ingredient.weight_in_mg, precision: 2) %>
+				</div>
+			<% end %>
+			<% if ingredient.weight_in_ml %>
+				<div>
+					Weight (mL): <%= number_with_precision(ingredient.weight_in_ml, precision: 2) %>
+				</div>
+			<% end %>
 			<div>
 				<%= link_to "Delete Ingredient", ingredient_path(ingredient), method: :delete %>
 			</div>
