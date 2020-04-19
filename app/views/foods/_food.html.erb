@@ -3,6 +3,8 @@
 		<div class="imageContainer">
 			<% if food.image.attached? %>
 				<%= image_tag(food.image) %>
+			<% else %>
+				<%= image_tag(food.image_url) %>
 			<% end %>
 		</div>
 		<%= food.pg_search_highlight.html_safe %>
@@ -10,6 +12,8 @@
 		<div class="imageContainer">
 			<% if food.image.attached? %>
 				<%= image_tag(food.image) %>
+			<% else %>
+				<%= image_tag(food.image_url) %>
 			<% end %>
 		</div>
 		<%= food.name %>

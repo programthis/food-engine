@@ -63,13 +63,14 @@ ActiveRecord::Schema.define(version: 2020_04_17_184028) do
     t.string "category"
     t.string "subcategory"
     t.string "buy_from_url"
+    t.string "image_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "ingredients", force: :cascade do |t|
     t.integer "quantity"
-    t.integer "cups"
+    t.float "cups"
     t.float "weight_in_mg"
     t.float "weight_in_ml"
     t.bigint "recipe_id", null: false
@@ -84,6 +85,7 @@ ActiveRecord::Schema.define(version: 2020_04_17_184028) do
     t.string "name"
     t.integer "time_needed"
     t.string "url"
+    t.string "image_url"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

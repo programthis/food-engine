@@ -21,6 +21,8 @@
 				<div class="imageContainer">
 					<% if food_item.food.image.attached? %>
 						<%= image_tag(food_item.food.image) %>
+					<% else %>
+						<%= image_tag(food_item.food.image_url) %>
 					<% end %>
 				</div>
 				<div class="header">

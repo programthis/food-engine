@@ -29,6 +29,6 @@ class RecipesController < ApplicationController
 	end
 
 	def recipe_params
-		params.require(:recipe).permit(:name, :content, :time_needed, :url, :image).merge(user: current_user)
+		params.require(:recipe).permit(:name, :content, :time_needed, :url, :image, :image_url).merge(user: current_user)
 	end
 end

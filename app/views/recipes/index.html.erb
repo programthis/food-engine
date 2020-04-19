@@ -4,6 +4,8 @@
 			<div class="imageContainer">
 				<% if recipe.image.attached? %>
 					<%= image_tag(recipe.image) %>
+				<% else %>
+					<%= image_tag(recipe.image_url) %>
 				<% end %>
 			</div>
 			<%= recipe.name %>

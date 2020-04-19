@@ -2,6 +2,8 @@
 	<h1><%= @food.name %></h1>
 	<% if @food.image.attached? %>
 		<%= image_tag(@food.image) %>
+	<% else %>
+		<%= image_tag(@food.image_url) %>
 	<% end %>
 	<div>
 		<%= link_to "Buy now", @food.buy_from_url, target: :_blank %>

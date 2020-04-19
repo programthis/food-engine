@@ -7,6 +7,10 @@
 		<div>
 			<%= image_tag(@recipe.image) %>
 		</div>
+	<% else %>
+		<div>
+			<%= image_tag(@recipe.image_url) %>
+		</div>
 	<% end %>
 	<h2>Ingredients</h2>
 	<% @recipe.ingredients.each do |ingredient| %>
@@ -14,6 +18,8 @@
 			<div class="imageContainer large">
 				<% if ingredient.food.image.attached? %>
 					<%= image_tag(ingredient.food.image) %>
+				<% else %>
+					<%= image_tag(ingredient.food.image_url) %>
 				<% end %>
 			</div>
 			<div>
