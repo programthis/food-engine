@@ -3,6 +3,8 @@ class Food < ApplicationRecord
 	has_many :food_items, dependent: :destroy
 	has_many :ingredients, dependent: :destroy
 	has_one_attached :image
+	attribute :image_url, :string, default: "default.jpg"
+
 	pg_search_scope :search_by_name, against: [:name, :category],
 		using: {
 			tsearch: {
